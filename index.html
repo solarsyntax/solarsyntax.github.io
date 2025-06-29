@@ -41,11 +41,9 @@
 </head>
 
 <body class="bg-light text-text font-sans transition duration-500">
-
-  <!-- Sidebar + Main Wrapper -->
-  <div class="flex min-h-screen">
+  <div class="flex flex-col lg:flex-row min-h-screen">
     <!-- Sidebar -->
-    <aside class="w-64 bg-white border-r border-soft/40 p-6 space-y-4">
+    <aside class="w-full lg:w-64 bg-white border-b lg:border-b-0 lg:border-r border-soft/40 p-6 space-y-4">
       <div class="text-2xl font-display font-bold">☀️ SolarSyntax</div>
       <nav class="space-y-2">
         <a href="#" class="block px-4 py-2 rounded-lg text-sm font-medium text-primary bg-soft">🏠 Home</a>
@@ -63,14 +61,13 @@
 
       <!-- Header -->
       <header class="text-center py-14 px-4">
-        <img src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/4b021e0984334189a6e6e5a84d9807e3~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=74fcdf80&x-expires=1751367600&x-signature=W0T7ZNVHIPAilpOU%2BANUYTo93Ng%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my" alt="profile"
-          class="w-20 h-20 rounded-full mx-auto border-4 border-white shadow-md">
+        <img src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/4b021e0984334189a6e6e5a84d9807e3~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=74fcdf80&x-expires=1751367600&x-signature=W0T7ZNVHIPAilpOU%2BANUYTo93Ng%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my" alt="profile" class="w-20 h-20 rounded-full mx-auto border-4 border-white shadow-md">
         <h1 class="mt-6 text-4xl sm:text-5xl font-display font-bold tracking-tight">SolarSyntax Shortcuts</h1>
         <p class="mt-2 text-muted text-sm">Kumpulan tautan penting saya dalam satu halaman</p>
       </header>
 
       <!-- Shortcut Cards -->
-      <main class="relative isolate grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 pb-20 max-w-6xl mx-auto">
+      <main class="relative isolate grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-6 pb-20 max-w-6xl mx-auto">
         <div class="rounded-2xl p-6 bg-gradient-to-br from-purple-100 via-white to-pink-100 text-gray-800 shadow-lg ring-1 ring-white/50 backdrop-blur-md transition hover:scale-105 hover:shadow-xl duration-300">
           <h2 class="text-lg font-semibold">🎥 YouTube</h2>
           <p class="text-sm mt-1 mb-3">Konten video edukasi & project saya.</p>
@@ -103,13 +100,16 @@
       </main>
 
       <!-- Halaman Barang -->
-      <section id="barang" class="px-6 pb-20 max-w-6xl mx-auto">
+      <section id="barang" class="px-4 sm:px-6 pb-20 max-w-6xl mx-auto">
         <h2 class="text-2xl font-display font-bold mb-6">📦 Barang</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div class="bg-white rounded-xl shadow-md p-4 border border-soft">
-            <img src="assets/img/keycaps/keycaps retro.jpeg" alt="Keycaps Retro" class="w-full h-40 object-cover rounded-md mb-3">
+            <a href="assets/img/keycaps/keycaps retro.jpeg" target="_blank">
+              <img src="assets/img/keycaps/keycaps retro.jpeg" alt="Keycaps Retro" class="w-full h-40 object-cover rounded-md mb-3 hover:opacity-90 transition">
+            </a>
             <h3 class="text-lg font-semibold text-primary">Keycaps Retro YongQiu</h3>
-            <p class="text-sm text-muted">Keycaps retro dari YongQiu dengan desain colorful klasik dan nuansa nostalgia, cocok untuk pecinta vintage setup.</p>
+            <p class="text-sm text-muted mb-2">Keycaps retro dari YongQiu dengan desain colorful klasik dan nuansa nostalgia, cocok untuk pecinta vintage setup.</p>
+            <a href="https://s.shopee.co.id/4L7zm59COz" target="_blank" class="text-xs font-medium text-white bg-primary px-3 py-1 rounded-full hover:bg-secondary transition">🔗 Link Pembelian di Shoppe</a>
           </div>
         </div>
       </section>
