@@ -2,34 +2,33 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shortcut Link</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f9f9f9;
-      padding: 40px;
-      text-align: center;
-    }
-    .link {
-      display: block;
-      margin: 10px auto;
-      padding: 12px 20px;
-      background: #0077cc;
-      color: white;
-      text-decoration: none;
-      width: 250px;
-      border-radius: 8px;
-    }
-    .link:hover {
-      background: #005fa3;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Link Saya | solarsyntax</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>🔗 Link Penting</h1>
-  <a class="link" href="https://youtube.com" target="_blank">YouTube</a>
-  <a class="link" href="https://instagram.com" target="_blank">Instagram</a>
-  <a class="link" href="https://github.com/solarsyntax" target="_blank">GitHub Saya</a>
+<body class="bg-gray-100 flex flex-col items-center min-h-screen py-10 px-4">
+
+  <div class="bg-white rounded-2xl shadow-xl p-6 w-full max-w-md text-center">
+    <img src="https://avatars.githubusercontent.com/u/00000000?v=4" alt="Avatar" class="w-24 h-24 mx-auto rounded-full mb-4">
+    <h1 class="text-2xl font-semibold text-gray-800 mb-1">SolarSyntax</h1>
+    <p class="text-gray-500 mb-6">Temukan semua shortcut link penting saya di sini 🌐</p>
+
+    <div class="space-y-4">
+      <a href="https://youtube.com" target="_blank" class="block bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-xl transition">
+        🎥 YouTube
+      </a>
+      <a href="https://instagram.com" target="_blank" class="block bg-pink-500 hover:bg-pink-600 text-white py-3 px-6 rounded-xl transition">
+        📸 Instagram
+      </a>
+      <a href="https://github.com/solarsyntax" target="_blank" class="block bg-gray-800 hover:bg-gray-900 text-white py-3 px-6 rounded-xl transition">
+        🧑‍💻 GitHub
+      </a>
+      <a href="mailto:emailkamu@email.com" class="block bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-xl transition">
+        ✉️ Email Saya
+      </a>
+    </div>
+  </div>
+
+  <p class="mt-6 text-sm text-gray-400">&copy; 2025 solarsyntax</p>
 </body>
 </html>
