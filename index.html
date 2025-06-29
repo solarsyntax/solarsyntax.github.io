@@ -5,75 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SolarSyntax | Shortcut Links</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#1e1b2e',       // background utama
+            softDark: '#2d2a3e',   // section/card
+            border: '#4b5563',     // garis halus
+            textMain: '#f1f5f9',   // teks utama
+            textSec: '#cbd5e1',    // teks sekunder
+            link: '#38bdf8',       // warna link
+          },
+          fontFamily: {
+            mono: ['Fira Code', 'monospace'],
+          },
+          transitionProperty: {
+            'custom': 'transform, box-shadow, border-color, background-color, filter'
+          },
+          scale: {
+            '102': '1.02'
+          }
+        },
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0f172a;
+      font-family: 'Fira Code', monospace;
     }
-    .bg-glass {
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .fade-in {
-      animation: fadeInUp 0.6s ease-out both;
-    }
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .hover-invert:hover {
+      filter: grayscale(0%) invert(100%) !important;
     }
   </style>
-  <meta name="description" content="Shortcut penting SolarSyntax" />
-  <meta property="og:title" content="SolarSyntax | Shortcut Links" />
-  <meta property="og:description" content="Temukan semua link penting SolarSyntax di satu tempat." />
-  <meta property="og:image" content="https://solarsyntax.github.io/avatar.jpg" />
-  <meta property="og:url" content="https://solarsyntax.github.io" />
 </head>
-<body class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white px-4 sm:px-6 lg:px-8">
-  <header class="text-center py-10 fade-in">
-    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight leading-snug">SolarSyntax</h1>
-    <p class="text-gray-400 mt-2 text-sm sm:text-base">Web developer, kreator, dan penggemar open source</p>
-  </header>
-
-  <main class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 py-10">
-    <div class="bg-glass rounded-xl p-5 sm:p-6 hover:ring-1 hover:ring-blue-400 transition-all fade-in" style="animation-delay: 0.1s">
-      <div class="text-3xl sm:text-4xl mb-3">🎥</div>
-      <h2 class="text-lg sm:text-xl font-semibold mb-2">YouTube</h2>
-      <p class="text-xs sm:text-sm text-gray-300 mb-3">Konten video edukasi & project saya.</p>
-      <a href="https://youtube.com" target="_blank" class="text-blue-400 text-sm sm:text-base font-medium hover:underline">Kunjungi Channel →</a>
-    </div>
-
-    <div class="bg-glass rounded-xl p-5 sm:p-6 hover:ring-1 hover:ring-pink-400 transition-all fade-in" style="animation-delay: 0.2s">
-      <div class="text-3xl sm:text-4xl mb-3">📸</div>
-      <h2 class="text-lg sm:text-xl font-semibold mb-2">Instagram</h2>
-      <p class="text-xs sm:text-sm text-gray-300 mb-3">Foto behind the scenes & keseharian saya.</p>
-      <a href="https://instagram.com" target="_blank" class="text-pink-400 text-sm sm:text-base font-medium hover:underline">Lihat Profil →</a>
-    </div>
-
-    <div class="bg-glass rounded-xl p-5 sm:p-6 hover:ring-1 hover:ring-gray-400 transition-all fade-in" style="animation-delay: 0.3s">
-      <div class="text-3xl sm:text-4xl mb-3">💻</div>
-      <h2 class="text-lg sm:text-xl font-semibold mb-2">GitHub</h2>
-      <p class="text-xs sm:text-sm text-gray-300 mb-3">Open source & eksperimen pribadi saya.</p>
-      <a href="https://github.com/solarsyntax" target="_blank" class="text-gray-300 text-sm sm:text-base font-medium hover:underline">Kunjungi Repo →</a>
-    </div>
-
-    <div class="bg-glass rounded-xl p-5 sm:p-6 hover:ring-1 hover:ring-green-400 transition-all fade-in sm:col-span-2 md:col-span-3" style="animation-delay: 0.4s">
-      <div class="text-3xl sm:text-4xl mb-3">✉️</div>
-      <h2 class="text-lg sm:text-xl font-semibold mb-2">Hubungi Saya</h2>
-      <p class="text-xs sm:text-sm text-gray-300 mb-3">Tertarik kerja sama atau ngobrol santai? Kirim email langsung.</p>
-      <a href="mailto:kamu@email.com" class="text-green-400 text-sm sm:text-base font-medium hover:underline">Kirim Email →</a>
-    </div>
+<body class="bg-dark text-textMain min-h-screen px-4 sm:px-6 md:px-8 relative">
+  <main class="max-w-3xl mx-auto py-16 sm:py-20">
+    <h1 class="text-2xl sm:text-3xl font-bold mb-8 text-link text-center sm:text-left">SolarSyntax Shortcuts</h1>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <li class="bg-softDark border border-border p-5 rounded-xl shadow-md transform transition-custom duration-300 hover:shadow-xl hover:border-link hover:scale-102 hover-invert">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-2xl">🎥</span>
+          <a href="https://youtube.com" target="_blank" class="text-link hover:underline text-lg font-semibold">YouTube</a>
+        </div>
+        <p class="text-textSec text-sm">Konten video edukasi & project saya.</p>
+      </li>
+      <li class="bg-softDark border border-border p-5 rounded-xl shadow-md transform transition-custom duration-300 hover:shadow-xl hover:border-link hover:scale-102 hover-invert">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-2xl">📸</span>
+          <a href="https://instagram.com" target="_blank" class="text-link hover:underline text-lg font-semibold">Instagram</a>
+        </div>
+        <p class="text-textSec text-sm">Foto behind the scenes & keseharian saya.</p>
+      </li>
+      <li class="bg-softDark border border-border p-5 rounded-xl shadow-md transform transition-custom duration-300 hover:shadow-xl hover:border-link hover:scale-102 hover-invert">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-2xl">💻</span>
+          <a href="https://github.com/solarsyntax" target="_blank" class="text-link hover:underline text-lg font-semibold">GitHub</a>
+        </div>
+        <p class="text-textSec text-sm">Open source & eksperimen pribadi saya.</p>
+      </li>
+      <li class="bg-softDark border border-border p-5 rounded-xl shadow-md transform transition-custom duration-300 hover:shadow-xl hover:border-link hover:scale-102 hover-invert">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-2xl">✉️</span>
+          <a href="mailto:kamu@email.com" class="text-link hover:underline text-lg font-semibold">Hubungi Saya</a>
+        </div>
+        <p class="text-textSec text-sm">Tertarik kerja sama atau ngobrol santai? Kirim email langsung.</p>
+      </li>
+    </ul>
   </main>
 
-  <footer class="text-center py-6 text-gray-500 text-xs sm:text-sm fade-in" style="animation-delay: 0.5s">
-    &copy; 2025 SolarSyntax. Dibuat dengan Tailwind CSS
-  </footer>
+  <!-- Waktu & Versi di pojok bawah kanan -->
+  <div class="fixed bottom-4 right-4 text-textSec text-xs text-right">
+    <div>Malang, Jawa Timur - <span id="time"></span></div>
+    <div class="text-link">SolarSyntax v1.0</div>
+  </div>
+
+  <script>
+    function updateTime() {
+      const now = new Date();
+      document.getElementById('time').textContent = now.toLocaleTimeString('en-GB');
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
 </body>
 </html>
