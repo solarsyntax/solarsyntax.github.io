@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f9fafb" />
   <title>SolarSyntax | Shortcuts</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -31,8 +32,7 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
   <style>
     .glass {
       background: rgba(255, 255, 255, 0.25);
@@ -40,7 +40,6 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
-
     canvas {
       position: fixed;
       top: 0;
@@ -48,154 +47,100 @@
       z-index: -10;
       pointer-events: none;
     }
-
     .blinking-cursor {
       font-weight: bold;
       font-size: 1em;
       color: #64748b;
       animation: blink 1s step-start infinite;
     }
-
     @keyframes blink {
-      50% {
-        opacity: 0;
-      }
+      50% { opacity: 0; }
     }
   </style>
 </head>
 
-<body class="bg-gradient-to-bl from-pink-100 via-indigo-100 to-purple-100">
-  <!-- Bubble Background -->
+<body class="bg-gradient-to-bl from-pink-100 via-indigo-100 to-purple-100 text-text">
   <canvas id="bubbleCanvas"></canvas>
-
   <div class="flex flex-col lg:flex-row min-h-screen">
-    <!-- Sidebar -->
-    <aside class="glass w-full lg:w-64 border-b lg:border-b-0 lg:border-r border-soft/40 p-6 space-y-4">
+    <aside class="glass w-full lg:w-64 border-b lg:border-b-0 lg:border-r border-soft/40 p-6 space-y-4 transition-all duration-300 ease-in-out">
       <div class="text-2xl font-display font-bold">☀️ SolarSyntax</div>
       <nav class="space-y-2">
-        <a href="#" class="block px-4 py-2 rounded-lg text-sm font-medium text-primary bg-soft">🏠 Home</a>
-        <a href="#barang" class="block px-4 py-2 rounded-lg text-sm font-medium text-muted hover:bg-soft">📦 Barang</a>
+        <a href="#" class="block px-4 py-2 rounded-lg text-sm font-medium text-primary bg-soft transition-all">🏠 Home</a>
+        <a href="#barang" class="block px-4 py-2 rounded-lg text-sm font-medium text-muted hover:bg-soft transition-all">📦 Barang</a>
       </nav>
     </aside>
-
-    <!-- Main Content -->
     <div class="flex-1">
-      <!-- Jam Digital dan Lokasi -->
       <div class="glass fixed top-4 right-4 z-50 px-4 py-2 rounded-full text-sm text-black shadow-md">
         <span id="clock">00:00:00</span>
         <span class="ml-2 text-muted">Malang, Jawa Timur</span>
       </div>
-
-      <!-- Header -->
-      <header class="text-center py-14 px-4">
-        <img
-          src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/4b021e0984334189a6e6e5a84d9807e3~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=b872f386&x-expires=1751698800&x-signature=CruGF5MG16sUA%2BC1kDA%2Ff9pAgWg%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my"
-          alt="profile" class="w-20 h-20 rounded-full mx-auto border-4 border-white shadow-md">
-        <h1 class="mt-6 text-4xl sm:text-5xl font-display font-bold tracking-tight">SolarSyntax Shortcuts</h1>
+      <header class="text-center py-14 px-4 lg:px-8">
+        <img src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/4b021e0984334189a6e6e5a84d9807e3~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=b872f386&x-expires=1751698800&x-signature=CruGF5MG16sUA%2BC1kDA%2Ff9pAgWg%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=myg" alt="profile" class="w-20 h-20 rounded-full mx-auto border-4 border-white shadow-md">
+        <h1 class="mt-6 text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight transition-all duration-500">SolarSyntax Shortcuts</h1>
         <p class="mt-2 text-muted text-sm">
           <span id="typing-text" class="inline-block"></span><span class="blinking-cursor">|</span>
         </p>
       </header>
-
-      <!-- Shortcut Cards -->
       <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-6 pb-20 max-w-6xl mx-auto">
-        <div
-          class="glass rounded-2xl p-6 text-gray-800 shadow-lg ring-1 ring-white/50 transition hover:scale-105 hover:shadow-xl duration-300">
+        <div class="glass rounded-2xl p-6 text-gray-800 shadow-lg ring-1 ring-white/50 transition-all duration-300 hover:scale-105 hover:shadow-glow">
           <h2 class="text-lg font-semibold">🎥 YouTube</h2>
           <p class="text-sm mt-1 mb-3">Konten video edukasi & project saya.</p>
-          <a href="https://youtube.com" target="_blank"
-            class="inline-block text-xs font-medium px-3 py-1 rounded-full bg-purple-200 text-purple-900 hover:bg-purple-300 transition">Lihat
-            Channel →</a>
+          <a href="https://youtube.com" target="_blank" class="inline-block text-xs font-medium px-3 py-1 rounded-full bg-purple-200 text-purple-900 hover:bg-purple-300 transition">Lihat Channel →</a>
         </div>
-
-        <div
-          class="glass rounded-2xl p-6 text-gray-800 shadow-lg ring-1 ring-white/50 transition hover:scale-105 hover:shadow-xl duration-300">
+        <div class="glass rounded-2xl p-6 text-gray-800 shadow-lg ring-1 ring-white/50 transition-all duration-300 hover:scale-105 hover:shadow-glow">
           <h2 class="text-lg font-semibold">📸 Instagram</h2>
           <p class="text-sm mt-1 mb-3">Foto behind the scenes & keseharian saya.</p>
-          <a href="https://instagram.com" target="_blank"
-            class="inline-block text-xs font-medium px-3 py-1 rounded-full bg-yellow-200 text-yellow-900 hover:bg-yellow-300 transition">Lihat
-            Profil →</a>
+          <a href="https://instagram.com" target="_blank" class="inline-block text-xs font-medium px-3 py-1 rounded-full bg-yellow-200 text-yellow-900 hover:bg-yellow-300 transition">Lihat Profil →</a>
         </div>
-
-        <div
-          class="glass rounded-2xl p-6 text-gray-800 shadow-lg ring-1 ring-white/50 transition hover:scale-105 hover:shadow-xl duration-300">
+        <div class="glass rounded-2xl p-6 text-gray-800 shadow-lg ring-1 ring-white/50 transition-all duration-300 hover:scale-105 hover:shadow-glow">
           <h2 class="text-lg font-semibold">✉️ Email</h2>
           <p class="text-sm mt-1 mb-3">Tertarik kerja sama atau ngobrol santai?</p>
-          <a href="mailto:optimistic.eth@email.com"
-            class="inline-block text-xs font-medium px-3 py-1 rounded-full bg-pink-200 text-pink-900 hover:bg-pink-300 transition">Kirim
-            Email →</a>
+          <a href="mailto:optimistic.eth@email.com" class="inline-block text-xs font-medium px-3 py-1 rounded-full bg-pink-200 text-pink-900 hover:bg-pink-300 transition">Kirim Email →</a>
         </div>
-
-        <div
-          class="glass rounded-2xl p-6 text-gray-800 shadow-lg ring-1 ring-white/50 transition hover:scale-105 hover:shadow-xl duration-300">
+        <div class="glass rounded-2xl p-6 text-gray-800 shadow-lg ring-1 ring-white/50 transition-all duration-300 hover:scale-105 hover:shadow-glow">
           <h2 class="text-lg font-semibold">🎵 TikTok</h2>
           <p class="text-sm mt-1 mb-3">Cuplikan video singkat dan tutorial cepat.</p>
-          <a href="https://www.tiktok.com/@solar.syntax" target="_blank"
-            class="inline-block text-xs font-medium px-3 py-1 rounded-full bg-green-200 text-green-900 hover:bg-green-300 transition">Lihat
-            TikTok →</a>
+          <a href="https://www.tiktok.com/@solar.syntax" target="_blank" class="inline-block text-xs font-medium px-3 py-1 rounded-full bg-green-200 text-green-900 hover:bg-green-300 transition">Lihat TikTok →</a>
         </div>
       </main>
-
-      <!-- Halaman Barang -->
       <section id="barang" class="px-4 sm:px-6 pb-20 max-w-6xl mx-auto">
         <h2 class="text-2xl font-display font-bold mb-6">📦 Barang</h2>
         <div class="flex items-start gap-2 p-3 mb-4 glass text-yellow-800 text-sm rounded-lg shadow-sm">
           <span class="text-lg">💡</span>
-          <span><strong>Catatan:</strong> Harga di <span
-              class="font-semibold underline underline-offset-2 decoration-dotted">Shopee</span> terkadang lebih murah
-            dibandingkan <span class="font-semibold underline underline-offset-2 decoration-dotted">TikTok Shop</span>,
-            jadi pastikan cek link-nya ya!</span>
+          <span><strong>Catatan:</strong> Harga di <span class="font-semibold underline underline-offset-2 decoration-dotted">Shopee</span> terkadang lebih murah dibandingkan <span class="font-semibold underline underline-offset-2 decoration-dotted">TikTok Shop</span>, jadi pastikan cek link-nya ya!</span>
         </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <!-- Keycaps -->
           <div class="glass rounded-xl shadow-md p-4 border border-soft">
             <a href="assets/img/keycaps/keycaps retro.jpeg" target="_blank">
-              <img src="assets/img/keycaps/keycaps retro.jpeg" alt="Keycaps Retro"
-                class="w-full h-40 object-cover rounded-md mb-3 hover:opacity-90 transition">
+              <img src="assets/img/keycaps/keycaps retro.jpeg" alt="Keycaps Retro" class="w-full h-40 object-cover rounded-md mb-3 hover:opacity-90 transition">
             </a>
             <h3 class="text-lg font-semibold text-primary">Keycaps Retro YongQiu</h3>
-            <p class="text-sm text-muted mb-2">Keycaps retro dari YongQiu dengan desain colorful klasik dan nuansa
-              nostalgia, cocok untuk pecinta vintage setup.</p>
-            <a href="https://s.shopee.co.id/4L7zm59COz" target="_blank"
-              class="text-xs font-medium text-white bg-primary px-3 py-1 rounded-full hover:bg-secondary transition">🔗
-              Link Pembelian di Shopee</a>
+            <p class="text-sm text-muted mb-2">Keycaps retro dari YongQiu dengan desain colorful klasik dan nuansa nostalgia, cocok untuk pecinta vintage setup.</p>
+            <a href="https://s.shopee.co.id/4L7zm59COz" target="_blank" class="text-xs font-medium text-white bg-primary px-3 py-1 rounded-full hover:bg-secondary transition">🔗 Link Pembelian di Shopee</a>
           </div>
-
           <!-- Meja -->
           <div class="glass rounded-xl shadow-md p-4 border border-soft">
             <a href="assets/img/meja.jpeg" target="_blank">
-              <img src="assets/img/meja.jpeg" alt="Meja Berka"
-                class="w-full h-40 object-cover rounded-md mb-3 hover:opacity-90 transition">
+              <img src="assets/img/meja.jpeg" alt="Meja Berka" class="w-full h-40 object-cover rounded-md mb-3 hover:opacity-90 transition">
             </a>
             <h3 class="text-lg font-semibold text-primary">Meja Berka Informa</h3>
-            <p class="text-sm text-muted mb-2">Meja Informa Berka berukuran 120×60×75 cm, cocok untuk kerja atau
-              belajar. Bagian atas berbahan MDF berlapis melamin yang mudah dibersihkan, dengan kaki logam berfinishing
-              powder coating.</p>
-            <a href="https://s.shopee.co.id/6fVuiODzvl" target="_blank"
-              class="text-xs font-medium text-white bg-primary px-3 py-1 rounded-full hover:bg-secondary transition">🔗
-              Link Pembelian di Shopee</a>
+            <p class="text-sm text-muted mb-2">Meja Informa Berka berukuran 120×60×75 cm, cocok untuk kerja atau belajar. Bagian atas berbahan MDF berlapis melamin yang mudah dibersihkan, dengan kaki logam berfinishing powder coating.</p>
+            <a href="https://s.shopee.co.id/6fVuiODzvl" target="_blank" class="text-xs font-medium text-white bg-primary px-3 py-1 rounded-full hover:bg-secondary transition">🔗 Link Pembelian di Shopee</a>
           </div>
-
           <!-- Lightbar -->
           <div class="glass rounded-xl shadow-md p-4 border border-soft">
             <a href="assets/img/meja.jpeg" target="_blank">
-              <img src="assets/img/meja.jpeg" alt="Lightbar"
-                class="w-full h-40 object-cover rounded-md mb-3 hover:opacity-90 transition">
+              <img src="assets/img/meja.jpeg" alt="Lightbar" class="w-full h-40 object-cover rounded-md mb-3 hover:opacity-90 transition">
             </a>
             <h3 class="text-lg font-semibold text-primary">Lymax Lightbar Monitor</h3>
-            <p class="text-sm text-muted mb-2">Lightbar ini hanya numpang di monitor tanpa harus dijepit, sudah
-              dilengkapi remote dan harga lebih murah dari TikTok Shop.</p>
-            <a href="https://s.shopee.co.id/6fVuiODzvl" target="_blank"
-              class="text-xs font-medium text-white bg-primary px-3 py-1 rounded-full hover:bg-secondary transition">🔗
-              Link Pembelian di Shopee</a>
+            <p class="text-sm text-muted mb-2">Lightbar ini hanya numpang di monitor tanpa harus dijepit, sudah dilengkapi remote dan harga lebih murah dari TikTok Shop.</p>
+            <a href="https://s.shopee.co.id/6fVuiODzvl" target="_blank" class="text-xs font-medium text-white bg-primary px-3 py-1 rounded-full hover:bg-secondary transition">🔗 Link Pembelian di Shopee</a>
           </div>
         </div>
       </section>
     </div>
   </div>
-
-  <!-- Jam Digital -->
   <script>
     function updateClock() {
       const now = new Date();
@@ -207,20 +152,15 @@
     setInterval(updateClock, 1000);
     updateClock();
   </script>
-
-  <!-- Bubble Background -->
   <script>
     const canvas = document.getElementById('bubbleCanvas');
     const ctx = canvas.getContext('2d');
-
     function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
-
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
-
     const iconURLs = [
       'https://img.icons8.com/arcade/64/keyboard.png',
       'https://img.icons8.com/dusk/64/cursor--v1.png',
@@ -232,57 +172,41 @@
       'https://img.icons8.com/3d-fluency/94/play-station.png',
       'https://img.icons8.com/3d-fluency/94/steam-circled.png'
     ];
-
     const loadedIcons = [];
     let loadedCount = 0;
-
     iconURLs.forEach(url => {
       const img = new Image();
       img.src = url;
       img.onload = () => {
         loadedCount++;
-        if (loadedCount === iconURLs.length) {
-          startParticles();
-        }
+        if (loadedCount === iconURLs.length) startParticles();
       };
       loadedIcons.push(img);
     });
-
     let particles = [];
-
     function createParticle() {
       return {
         x: Math.random() * canvas.width,
         y: canvas.height + Math.random() * canvas.height,
         speed: Math.random() * 0.5 + 0.3,
-        size: Math.random() * 30 + 30, // ukuran icon 24–48 px
+        size: Math.random() * 30 + 30,
         icon: loadedIcons[Math.floor(Math.random() * loadedIcons.length)]
       };
     }
-
     function startParticles() {
-      for (let i = 0; i < 40; i++) {
-        particles.push(createParticle());
-      }
+      for (let i = 0; i < 40; i++) particles.push(createParticle());
       animateParticles();
     }
-
     function animateParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (let p of particles) {
         ctx.drawImage(p.icon, p.x, p.y, p.size, p.size);
         p.y -= p.speed;
-        if (p.y + p.size < 0) {
-          Object.assign(p, createParticle());
-          p.y = canvas.height + p.size;
-        }
+        if (p.y + p.size < 0) Object.assign(p, createParticle(), { y: canvas.height + p.size });
       }
       requestAnimationFrame(animateParticles);
     }
   </script>
-
-
-  <!-- Typing Animation -->
   <script>
     const textElement = document.getElementById("typing-text");
     const baseText = "Hello ";
@@ -290,7 +214,6 @@
     let currentIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-
     function typeLoop() {
       const currentSuffix = suffixes[currentIndex];
       if (!isDeleting) {
@@ -307,11 +230,9 @@
           currentIndex = (currentIndex + 1) % suffixes.length;
         }
       }
-
       textElement.textContent = baseText + currentSuffix.substring(0, charIndex);
       setTimeout(typeLoop, isDeleting ? 50 : 100);
     }
-
     typeLoop();
   </script>
 </body>
